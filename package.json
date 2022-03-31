@@ -1,0 +1,23 @@
+{
+  "name": "svelte-contentful",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "svelte-kit dev",
+    "build": "svelte-kit build",
+    "package": "svelte-kit package",
+    "preview": "svelte-kit preview",
+    "prepare": "svelte-kit sync"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "contentful-export": "^7.14.39",
+    "contentful-import": "^8.2.28",
+    "svelte": "^3.44.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "contentful": "^9.1.18",
+    "marked": "^4.0.12"
+  }
+}
