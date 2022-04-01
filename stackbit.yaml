@@ -3,6 +3,7 @@
 # stackbit.yaml configuration visit https://docs.stackbit.com/reference/stackbit-yaml/
 stackbitVersion: ~0.4.0
 cmsName: contentful
+ssgName: custom
 nodeVersion: '14'
 
 # The "buildCommand" and the "publishDir" properties are used to configure the
