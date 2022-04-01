@@ -13,8 +13,9 @@
     export let currentUrl;
 
     if (import.meta.hot) {
-        import.meta.hot.on("sb-invalidate", () => {
+        import.meta.hot.on("content-update", () => {
             invalidate(`${currentUrl}.json`);
+            console.log("Content update - invalidating current page");
         });
     }
 </script>

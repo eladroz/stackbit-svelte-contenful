@@ -28,7 +28,7 @@ if (isDev) {
                 }
 
                 currentSyncToken = nextSyncToken;
-                writeFileSync('./src/contentful/1', nextSyncToken);
+                writeFileSync('./src/contentful/update', nextSyncToken);
             });
         }, 1000);
     });

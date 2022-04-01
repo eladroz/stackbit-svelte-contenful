@@ -12,9 +12,10 @@ const config = {
 					},
 					handleHotUpdate(ctx) {
 						if (ctx.file.includes('contentful')) {
+							console.log("Contentful update file was changed");
 							ctx.server.ws.send({
 								type: 'custom',
-								event: 'sb-invalidate',
+								event: 'content-update',
 							});
 						}
 					},
