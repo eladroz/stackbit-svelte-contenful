@@ -6,5 +6,6 @@
 .env
 .env.*
 !.env.example
+.svelte-kit
 .cache
 pnpm-lock.yaml
