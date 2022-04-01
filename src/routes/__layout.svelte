@@ -14,7 +14,7 @@
 
     if (import.meta.hot) {
         import.meta.hot.on("sb-invalidate", () => {
-            invalidate(currentUrl);
+            invalidate(`${currentUrl}.json`);
         });
     }
 </script>

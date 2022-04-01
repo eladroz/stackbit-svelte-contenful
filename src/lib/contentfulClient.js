@@ -17,10 +17,6 @@ if (isDev) {
     }).then(({
         nextSyncToken,
     }) => {
-        // if (currentSyncToken === nextSyncToken) {
-        //     return;
-        // }
-
         currentSyncToken = nextSyncToken;
 
         setInterval(() => {
@@ -32,8 +28,7 @@ if (isDev) {
                 }
 
                 currentSyncToken = nextSyncToken;
-                // console.log('>> CHANGE <<');
-                writeFileSync('./src/contentful/1', '0');
+                writeFileSync('./src/contentful/1', nextSyncToken);
             });
         }, 1000);
     });

@@ -1,5 +1,4 @@
 import adapter from '@sveltejs/adapter-netlify';
-
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
@@ -12,10 +11,12 @@ const config = {
 						server.watcher.add('./contentful/');
 					},
 					handleHotUpdate(ctx) {
-						ctx.server.ws.send({
-							type: 'custom',
-							event: 'sb-invalidate',
-						});
+						if (ctx.file.includes('contentful')) {
+							ctx.server.ws.send({
+								type: 'custom',
+								event: 'sb-invalidate',
+							});
+						}
 					},
 				},
 			]
