@@ -1,15 +1,15 @@
-# The stackbit.yaml file lets you define the characteristic of your website
-# needed to make your theme, or project, work with Stackbit. For more info about
-# stackbit.yaml configuration visit https://docs.stackbit.com/reference/stackbit-yaml/
-stackbitVersion: ~0.4.0
+stackbitVersion: ~0.5.0
 cmsName: contentful
 ssgName: custom
-nodeVersion: '14'
+nodeVersion: '16'
 
-# The "buildCommand" and the "publishDir" properties are used to configure the
-# serverless deployment platform when Stackbit creates a new site from this theme.
 buildCommand: npm run build
-publishDir: out
+devCommand: ./node_modules/vite/bin/vite.js --port {PORT} --host {HOST}
+publishDir: .svelte-kit
+
+__unsafe_internal_stackbitRunnerOptions:
+  directPaths:  
+    - '/vite-hmr/**'
 
 import:
   type: contentful
@@ -18,6 +18,7 @@ import:
   assetsDirectory: contentful
   spaceIdEnvVar: CONTENTFUL_SPACE_ID
   accessTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
+  previewTokenEnvVar: CONTENTFUL_PREVIEW_TOKEN
 
 modelsSource:
   type: contentful

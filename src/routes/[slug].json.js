@@ -1,6 +1,6 @@
 import { client } from '$lib/contentfulClient';
 
-export async function get({ params }) {
+export async function GET({ params }) {
     const blog = await client.getEntries({
         'fields.slug': params.slug,
         content_type: 'blog-post'

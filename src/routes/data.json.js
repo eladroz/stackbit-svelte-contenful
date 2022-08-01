@@ -1,6 +1,6 @@
 import { client } from '$lib/contentfulClient';
 
-export async function get() {
+export async function GET() {
     // get all blogs from Contentful
     const blogs = await client.getEntries({
         content_type: 'blog-post'

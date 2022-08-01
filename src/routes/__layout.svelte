@@ -12,12 +12,12 @@
     import { invalidate } from "$app/navigation";
     export let currentUrl;
 
-    if (import.meta.hot) {
-        import.meta.hot.on("content-update", () => {
-            invalidate(`${currentUrl}.json`);
-            console.log("Content update - invalidating current page");
-        });
-    }
+	function onContentChange(event) {
+        invalidate(`${currentUrl}.json`);
+        console.log("Content update - invalidating current page");
+	}
 </script>
+
+<svelte:window on:stackbitObjectsChanged|preventDefault={onContentChange}/>
 
 <slot />
