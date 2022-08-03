@@ -9,6 +9,8 @@ publishDir: .svelte-kit
 experimental:
   ssg:
     name: sveltekit
+  logPatterns:
+    up: ' ready in '
     passthrough:  
       - '/vite-hmr/**'
 
