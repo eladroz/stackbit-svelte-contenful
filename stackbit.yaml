@@ -4,13 +4,13 @@ nodeVersion: '16'
 
 ssgName: custom
 buildCommand: npm run build
-devCommand: ./node_modules/.bin/vite --port {PORT} --host --clearScreen false
+devCommand: ./node_modules/.bin/vite --port {PORT}
 publishDir: .svelte-kit
 experimental:
   ssg:
     name: sveltekit
     logPatterns:
-      up: ' ready in '
+      up: 'Local: http'
     passthrough:  
       - '/vite-hmr/**'
 
