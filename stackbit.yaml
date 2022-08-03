@@ -6,10 +6,10 @@ nodeVersion: '16'
 buildCommand: npm run build
 devCommand: ./node_modules/vite/bin/vite.js --port {PORT} --host {HOST}
 publishDir: .svelte-kit
-
-__unsafe_internal_stackbitRunnerOptions:
-  directPaths:  
-    - '/vite-hmr/**'
+experimental:
+  ssg:
+    passthrough:  
+      - '/vite-hmr/**'
 
 import:
   type: contentful
