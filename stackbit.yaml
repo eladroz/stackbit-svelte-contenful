@@ -9,10 +9,10 @@ publishDir: .svelte-kit
 experimental:
   ssg:
     name: sveltekit
-  logPatterns:
-    up: ' ready in '
-  passthrough:  
-    - '/vite-hmr/**'
+    logPatterns:
+      up: ' ready in '
+    passthrough:  
+      - '/vite-hmr/**'
 
 import:
   type: contentful
