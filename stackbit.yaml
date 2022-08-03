@@ -10,7 +10,7 @@ experimental:
   ssg:
     name: sveltekit
     logPatterns:
-      up: ' ready in '
+      up: 'Local: http'
     passthrough:  
       - '/vite-hmr/**'
 
