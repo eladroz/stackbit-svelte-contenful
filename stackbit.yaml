@@ -11,8 +11,8 @@ experimental:
     name: sveltekit
   logPatterns:
     up: ' ready in '
-    passthrough:  
-      - '/vite-hmr/**'
+  passthrough:  
+    - '/vite-hmr/**'
 
 import:
   type: contentful
