@@ -4,7 +4,7 @@ nodeVersion: '16'
 
 ssgName: custom
 buildCommand: npm run build
-devCommand: ./node_modules/.bin/vite --port {PORT}
+devCommand: ./node_modules/.bin/vite --port {PORT} --host
 publishDir: .svelte-kit
 experimental:
   ssg:
