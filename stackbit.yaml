@@ -3,9 +3,7 @@ cmsName: contentful
 nodeVersion: '16'
 
 ssgName: custom
-buildCommand: npm run build
-devCommand: ./node_modules/.bin/vite --port {PORT}
-publishDir: .svelte-kit
+devCommand: ./node_modules/.bin/vite --port {PORT} --host
 experimental:
   ssg:
     name: sveltekit
