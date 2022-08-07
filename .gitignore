@@ -9,3 +9,4 @@
 .svelte-kit
 .cache
 pnpm-lock.yaml
+.netlify
