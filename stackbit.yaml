@@ -3,7 +3,7 @@ cmsName: contentful
 nodeVersion: '16'
 
 ssgName: custom
-devCommand: ./node_modules/.bin/vite --port {PORT} --host
+devCommand: ./node_modules/.bin/vite --port {PORT} --host --clearScreen false
 experimental:
   ssg:
     name: sveltekit
