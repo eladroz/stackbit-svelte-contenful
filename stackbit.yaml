@@ -4,6 +4,7 @@ nodeVersion: '16'
 
 ssgName: custom
 devCommand: ./node_modules/.bin/vite --port {PORT}
+experimental:
   ssg:
     name: sveltekit
     logPatterns:
