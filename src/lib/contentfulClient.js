@@ -1,4 +1,4 @@
-import contentful from 'contentful';
+import * as contentful from 'contentful'; // This avoids bundling issues of the Contentful package in production
 
 const isDev = process.env.NODE_ENV === 'development';
 
